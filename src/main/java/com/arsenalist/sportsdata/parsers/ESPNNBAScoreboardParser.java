@@ -20,7 +20,7 @@ public class ESPNNBAScoreboardParser {
 
 	private void init() {
 		try {
-			this.document = Jsoup.connect("http://scores.espn.go.com/nba/scoreboard?date="+this.date).get();
+			this.document = Jsoup.connect("http://scores.espn.go.com/nba/scoreboard?date=" + this.date).get();
 		} catch (Exception e) {
 			throw new RuntimeException("Could not get the list of games for " + this.date, e);
 		}
